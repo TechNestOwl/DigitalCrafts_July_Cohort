@@ -17,7 +17,37 @@ for (let i = 0 ; i < numbers.length; i++) {
 
         if(resultDisplayed === false){
             input.innerHTML += e.target.innerHTML;
+        } else if (resultDisplayed === true & lastChar === '+' || lastChar ==='-' || lastChar ==='*'|| lastChar ==='/'){
+            resultDisplayed = flase;
+            input.innerHTML += e.target.innerHTML;
+        } else {
+            resultDisplayed = false;
+            input.innerHTML ="";
+            input.innerHTML += e.target.innerHTML;
         }
 
     })
 };
+
+for (let i = 0; i < operators.length; i ++){
+    operators[i].addEventListener('click', function(e){
+        let currentString = input.innerHTML;
+        let lastChar = currentString[currentString.length -1];
+        
+        //if the last char entered is an operator, replace it with currently pressed one
+        if (lastChar === "+" ||lastChar === "-" ||lastChar === "*" ||lastChar === "+" ||lastChar === "/"){
+            let newString = currentString.substring(0, currentString.length - 1) + e.target.innerHTML;
+            input.innerHTML = newString;
+        } else if (currentString.length === 0) {
+            //first key is operator, do nothing
+            console.log('enter a number')
+        } else {
+            //else jsut add the operator
+            input.innerHTML += e.target.innerHTML;
+        }
+    });
+}
+
+clear.addEventListener('ckick', function(e){
+    input.innerHTML = "";
+})
