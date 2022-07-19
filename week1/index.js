@@ -48,6 +48,7 @@ for (let i = 0; i < operators.length; i ++){
     });
 }
 
+
 clear.addEventListener('ckick', function(e){
     input.innerHTML = "";
 })
