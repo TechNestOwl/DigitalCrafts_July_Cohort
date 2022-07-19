@@ -51,3 +51,16 @@ const merged = myFruits.concat(numbers);
 numbers.push(678);
 // console.log(numbers)
 
+//pop: this methods removes the last item from an array and returns it. In this case, removes the '678' from the numbers array.
+numbers.pop()
+// console.log(numbers)
+
+//shift: is similar to pop, but it removes the first item of the array and returns it.
+numbers.shift();
+// console.log(numbers)
+
+//unshift() this methods adds an item(s) to the begining of  an array and changes the origianl array
+numbers.unshift("hello",1);
+// console.log(numbers);
+
+
