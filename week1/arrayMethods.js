@@ -63,8 +63,11 @@ numbers.shift();
 numbers.unshift("hello",1);
 // console.log(numbers);
 
-//splice() changes the array by adding, removing, and inserting elements
+
+//          **** SPLICE() ****
+//changes the array by adding, removing, and inserting elements
 const itemArray = ["item1", 'item2','item3','item4','item5'];
+
 // NOTE: the first parameter here is the index of where to start the splice, the second param is how many elements 
 // to be delted startiong from the afromentioned INDEX. Not the index of whre to stop.
 // if the second number is not defiend, every element starting from the given idex will be deleted. 
@@ -72,7 +75,26 @@ itemArray.splice(1,3);
 // console.log(itemArray)
 
 
+let schedule = ['monday','tuesday','thursday','friday'];
+
+//replacing items with splice()
+schedule.splice(3,1,"friYAY", 'saturYAY');
+
+//adding elements with splice()
+schedule.splice(2,0,"wednesday")
+// console.log(schedule)
 
 
+//slice() is similar to splice in how you select/target array elemtnts. The difference is slice returns a new array within the selected elements.
+//it does NOT alter the origijnal array.
+let jetskis = ["yamaha",'see-doo','kawasaki'];
+let bestJetSki = "the best JetSki brand is " + jetskis.slice(0,1);
+// console.log(bestJetSki)
 
+//split() this method is used for stings, it divides a strings itto substrings and returns them as an array
 
+let firstName = 'Gill';
+
+firstName.split("")// returns an array with each letter being as a seperate element
+firstName.split()// returns and array with one element (the entire string)
+firstName.split("i",2)// returns and array with two elements -> ['g','ll']
