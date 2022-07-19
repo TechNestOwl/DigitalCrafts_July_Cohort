@@ -12,6 +12,14 @@ numbers.forEach(function(num){
 })
 
 
+//.map is similar to forEach except that it creates and returns a new array. In this case "doubled" is the new array. 
+const doubled = numbers.map(function(num){
+    return num * 2;
+})
+
+// console.log(doubled);
+
+
 
 //.filter iterates through an array and only returns data that meaets the criteria(defined trough a truth test inside a function)
 
