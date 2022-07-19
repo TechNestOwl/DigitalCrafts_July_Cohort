@@ -7,5 +7,17 @@ const words = ['cat','discombobulate', 'dog', 'notarealword','pet','computer'];
 const threeLetterWord = words.filter(function(word){
     return word.length === 3;
 });
-
 console.log(threeLetterWord);
+
+
+const people = [
+    {name:'gwen', age: 25, home:'Leeds'},
+    {name:'todd', age: 25, home:'Acworth'},
+    {name:'jake', age: 25, home:'Leeds'},
+    {name:'stephan', age: 25, home:'Atlanta'},
+];
+
+const leedsPeeps = people.filter(function(person){
+    return person.home === "Leeds";
+});
+console.log(leedsPeeps);
