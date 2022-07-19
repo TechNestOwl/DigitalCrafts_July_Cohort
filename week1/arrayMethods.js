@@ -63,4 +63,16 @@ numbers.shift();
 numbers.unshift("hello",1);
 // console.log(numbers);
 
+//splice() changes the array by adding, removing, and inserting elements
+const itemArray = ["item1", 'item2','item3','item4','item5'];
+// NOTE: the first parameter here is the index of where to start the splice, the second param is how many elements 
+// to be delted startiong from the afromentioned INDEX. Not the index of whre to stop.
+// if the second number is not defiend, every element starting from the given idex will be deleted. 
+itemArray.splice(1,3); 
+// console.log(itemArray)
+
+
+
+
+
 
