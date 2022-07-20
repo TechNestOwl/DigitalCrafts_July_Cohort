@@ -3,6 +3,8 @@ const playerHand = document.getElementById("player-hand");
 const deck = [];
 const suits = ["hearts", "spades", "clubs", "diamonds"];
 const ranks = ["ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "jack", "queen", "king"];
+
+
 const makeDeck = (rank, suit) => {
   const card = {
     rank: rank,
@@ -11,6 +13,8 @@ const makeDeck = (rank, suit) => {
   };
   deck.push(card);
 };
+
+
 
 for (let suit of suits) {
   for (const rank of ranks) {
@@ -21,3 +25,7 @@ for (let suit of suits) {
 window.addEventListener("DOMContentLoaded", () => {
   // Execute after page load
 });
+
+const deal_btn = document.getElementById("deal-button");
+deal_btn.addEventListener("click",function(){
+})
