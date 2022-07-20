@@ -12,15 +12,26 @@ const numbers = [1,2,3,4,5];
 // })
 
 
-//.map is similar to forEach except that it creates and returns a new array. In this case "doubled" is the new array. 
+//                  *** .map() ***
+
+//this method creates a new array from the manipulation of elements from another array.
+// is similar to forEach except that it creates and returns a new array. In this case "doubled" is the new array. 
 const doubled = numbers.map(function(num){
     return num * 2;
 })
-
 // console.log(doubled);
 
+const userNames = ['tinyTina','dannyDourman','marko','oz'];
+const display = userNames.map(item => '<li>' + item + '</li>');
 
-//      *** Filter() ***
+const render = '<ul>' + display.join('') + '</ul>';
+
+
+
+
+
+
+//                    *** filter() ***
 
 //iterates through an array and only returns data that meaets the criteria(defined trough a truth test inside a function)
 
