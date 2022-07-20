@@ -20,14 +20,26 @@ const doubled = numbers.map(function(num){
 // console.log(doubled);
 
 
+//      *** Filter() ***
 
-//.filter iterates through an array and only returns data that meaets the criteria(defined trough a truth test inside a function)
+//iterates through an array and only returns data that meaets the criteria(defined trough a truth test inside a function)
 
 const words = ['cat','discombobulate', 'dog', 'notarealword','pet','computer'];
 const threeLetterWord = words.filter(function(word){
     return word.length === 3;
 });
 // console.log(threeLetterWord);
+
+// let results = array.filter(function(item, index, array){
+
+// });
+// check if users from Brazil:
+const countryCode = ['+234', '+144','+224','+678','+234'];
+const brazilian = countryCode.filter(code => code === '+234');
+// const brazilian = countryCode.filter(function(code){
+//     return code === '+234'
+// });
+// console.log(brazilian);
 
 
 const people = [
@@ -40,6 +52,9 @@ const leedsPeeps = people.filter(function(person){
     return person.home === "Leeds";
 });
 // console.log(leedsPeeps);
+
+
+
 
 
 //concat: this method combines two arrays together or add more items to an array and then returns a new array
@@ -97,4 +112,19 @@ let firstName = 'Gill';
 
 firstName.split("")// returns an array with each letter being as a seperate element
 firstName.split()// returns and array with one element (the entire string)
-firstName.split("i",2)// returns and array with two elements -> ['g','ll']
+firstName.split("i",2)// returns and array with two elements -> ['G','ll']
+
+//indexOf() looks for an item in an array and returns the index of it. If none is found, -1 is returned.
+let fruits = ['apple','orange',false,3,'apple'];
+// console.log(fruits.indexOf("orange"));
+
+// lastIndexOf() works the same as indexOf(), except that it searches from right to left <- front to bacck
+// console.log(fruits.lastIndexOf('apple'));  //returns 4
+
+// toString() converts an array to a string seperated by a comma
+let colors = ['blue', 'orange is the new black', 'purple'];
+// console.log(colors.toString())
+
+// join() is similar to toString() but here you can specify the sperator instead of the default comma
+
+// console.log(colors.join('*'))
