@@ -11,6 +11,10 @@ const numbers = [1,2,3,4,5];
 //     console.log(num)
 // })
 
+const colorArray = ['blue','orange','yellow','magenta'];
+// colorArray.forEach((item,index) => console.log(index,item))
+
+
 
 //                  *** .map() ***
 
@@ -139,3 +143,32 @@ let colors = ['blue', 'orange is the new black', 'purple'];
 // join() is similar to toString() but here you can specify the sperator instead of the default comma
 
 // console.log(colors.join('*'))
+
+//reduce() this method is good for calculating totals. Used to calculaate a single value based on an array.
+
+const hundos = [100, 300, 200, 500];
+
+const sum = hundos.reduce((accummulator, value) => accummulator + value);
+
+// console.log(sum)
+
+//          *** every() ***
+
+// This method checks if all items in an array pass the specified conditon and return true if passed, else false. EX below: check if all numbers are postivie
+
+const numList = [1,-1,0,2,3,-200, 20];
+
+let allPostivieNumbers = numList.every((value) => value >=0);
+// console.log(allPostivieNumbers);
+
+//          *** some() ***
+//this method checks if an item (one or more) in an array pass the specified conditon and return true if passed, else false. EX below: checks if at leat one number is positive
+
+let atLeastOnePositive = numList.some((value) => value >=0 );
+let atLeastOneNegative = numList.some((value) => value <=0 );
+// console.log(atLeastOneNegative);
+
+//          *** includes() ***
+// similar to .some() in that it checks an array to see if has a certain item. But,instead of looking for a specific condition to pass, it checks if the arrays contains a specific item.
+let users = ['patrick', 'zaddy', 'faddy','baddy'];
+// console.log(users.includes('zaddy'); // returns true
