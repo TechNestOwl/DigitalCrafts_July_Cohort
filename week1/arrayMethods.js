@@ -172,3 +172,4 @@ let atLeastOneNegative = numList.some((value) => value <=0 );
 // similar to .some() in that it checks an array to see if has a certain item. But,instead of looking for a specific condition to pass, it checks if the arrays contains a specific item.
 let users = ['patrick', 'zaddy', 'faddy','baddy'];
 // console.log(users.includes('zaddy'); // returns true
+
